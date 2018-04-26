@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
+/* ------------------------------------------------------ colours----------------------*/
+
+
+.bg-color-name-title {
+    background-color: #676767;                        /* Rosie Underpants */
+}
+.bg-color-three-reasons {
+    background-color: #ffffff;        /* About Me */
+}
+
+.ui-menu-color-home {
+    background-color: #e67e22;
+}
+
+.ui-menu-color-resume {
+    background-color: #9b59b6;
+}
+
+.ui-menu-color-contact {
+    background-color: #3498db;
+}
+
+.ui-menu-color-download {
+    background-color: #525252;
+}
+
+
+/* -------------------------------------special paddings/margins/texts -----------*/
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.general-sub {
+    font-family: "Exo",sans-serif;
+    font-weight: 300;
+    color: #fafafa;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.section-column {
+    padding: 0 30px 30px;
+    float: none;
+    display: table-cell;
+}
+
+.row-table {
+    display: table;                    /* can specify its child column as table cells ensuring columns remain equal height regardless of content */
+}
+
+.section-heading {
+    font-family:  "Exo", sans-serif;
+    font-weight: 300;
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+/* ------------------------------------------------------ headings----------------------*/
+
+header {
+    margin: 0;
+}
+
+.heading {
+    margin-left: 50px;                        /* moves Rosie Underpants title away from pic */
+}
+
+.logo{
+    background: url("../images/rosie.jpg");
+    background-position: center;
+    background-repeat: no-repeat;                    /* no repeat...dont want it to tile the background */
+    background-size: cover;                            /* cover container it sits in */
+    min-height: 360px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;            /* -moz- browser prefix */
+    -webkit-transition: all .5s ease-in-out;
+}
+
+.name {
+    font-family: "Exo", sans-serif;
+    font-weight: 100;
+    font-size: 46px;
+    margin-top: 50px;
+    color: #ffffff;
+}
+
+.title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 200;                            /* 200 as we stated it above on line 1 */
+    font-size: 28px;
+    margin-top: 20px;
+    margin-bottom: 90px;
+    color: #ffffff;
+}
+
+#nav {
+    margin: 0;               /* this got rid of allignment issue in nav bar */
+}
+
+#nav li {
+    padding: 0;          /* got rid of border around hover sweep-to-bottom */
+}
+
+.menuitem {
+    height:  120px;           /* 120 is 1/3 of 360(total height) */
+    text-align: center;
+    padding: 0;
+}
+
+.menuitem a {                /* anchor(clickable area)  */
+    width: 100%;
+    text-decoration: none;      /* removes underline */
+    color: #ffffff;
+    height: 120px;
+}
+
+
+.menuitem a i {
+    padding-top: 22px;
+    display: block;                /* will occupy it's parent container */
+    color: #fafafa;             /* off white */
+    font-size:  26px; 
+} 
+
+.menuitem span {
+    display: block;
+    width: 100%;
+    padding-top: 5px;                /* pusheses it down from fontawesome icon */
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+
+/* ------------------------------------------------------ hover.css----------------------*/
+
+.hvr-sweep-to-bottom:before {
+     background: rgba(0, 0, 0, 0.2);   /* transparency set to 0.2 to give a grey colour */
+     height: 120px;
+}
+
+
+/* ---------------------------------------footer-----------------------*/
+
+footer {
+    background-color: #525252;
+    color: #fafafa;
+    min-height: 120px;
+    margin: 0;
+}
+
+footer .cv-pdf i {                    /* i because accessing font awesome icon */
+    color: #fafafa;
+    text-align: center;         
+    font-size: 18px;
+    padding-left: 5px;
+}
+
+footer .cv-pdf i:hover {
+    color: #e84610;                                    /* orange */
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+    
+}
+
+.social-links {
+    padding-bottom: 15px;
+}                                                                    /* use a border to create a perfect circle */
+
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 13px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    -webkit-transition: all 0.35s ease-in-out;
+    -o-transition: all 0.35s ease-in-out;
+}
+
+.social-links li a i:hover {
+    background: #e84610;
+}
+
+#footer-details {
+    margin: 20px;
+}
