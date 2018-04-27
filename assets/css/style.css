@@ -56,6 +56,9 @@ h4 {
     display: table-cell;
 }
 
+.ham {
+    background-color: #525252                   /*gives section (about me) gray colour */
+}
 .row-table {
     display: table;                    /* can specify its child column as table cells ensuring columns remain equal height regardless of content */
 }
@@ -85,6 +88,7 @@ header {
     transition: all .5s ease-in-out;
     -moz-transition: all .5s ease-in-out;            /* -moz- browser prefix */
     -webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
 }
 
 .name {
@@ -204,4 +208,15 @@ footer .cv-pdf i:hover {
 
 #footer-details {
     margin: 20px;
+}
+
+/* ----------------------------- three reasons ----*/
+
+.three-reasons-icon {
+    font-size: 26px;
+    color: #e67e22;
+}
+
+.three-reasons-heading {
+    margin-bottom: 15px;
 }
