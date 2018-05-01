@@ -10,6 +10,21 @@
     background-color: #ffffff;        /* About Me */
 }
 
+.bg-color-personal-info {
+    background-color:  #f4f4f4;
+}
+
+
+.bg-color-skills {
+    background-color: #ffffff;                /* not sure where this came from (found it adding work history timeline 8.46) */
+}
+
+.bg-color-work-history {
+    background-color: #9b59b5;
+}
+
+
+
 .ui-menu-color-home {
     background-color: #e67e22;
 }
@@ -50,11 +65,7 @@ h4 {
     display: inline-block;
 }
 
-.section-column {
-    padding: 0 30px 30px;
-    float: none;
-    display: table-cell;
-}
+
 
 .ham {
     background-color: #525252                   /*gives section (about me) gray colour */
@@ -63,6 +74,7 @@ h4 {
     display: table;                    /* can specify its child column as table cells ensuring columns remain equal height regardless of content */
 }
 
+.history-heading,            /* attached this to section-heading and also created seperate history-heading below */
 .section-heading {
     font-family:  "Exo", sans-serif;
     font-weight: 300;
@@ -219,4 +231,120 @@ footer .cv-pdf i:hover {
 
 .three-reasons-heading {
     margin-bottom: 15px;
+}
+
+
+/* -------------------------- personal info------*/
+
+.personal-info-item {        /* we want each to stand alone..take up all horrizontal space available to it and push down its siblings */
+    margin-bottom: 20px;        /* create some space */
+    display: block;                  /* occupy entirety of its horrizontal space */
+    clear: both;         /* no other items can appear either side of it */
+}
+
+.personal-info-item .key,                        
+.personal-info-item .value {            /* overlapping styles */
+    padding right: 8px;      /* makes it more presentable */
+}
+
+.personal-info-item .key p,                        
+.personal-info-item .value p {            /* overlapping styles */
+    margin: 0;            /* clean margins outside each of the paragraphs */
+}
+
+.personal-info-item .key {           /* sitting on left  */
+    display: inline-block;            /* we want key and value on same line..hence inline-block */
+    width: 30%;
+    margin-right: 21px;
+    padding-top: 2px;
+    vertical-align: top;
+}
+
+.personal-info-item .key p {              /* key paragraph */
+    font-weight: 700;
+}
+
+.personal-info-item .value {
+    display: inline-block;            /* allows key to sit to the left of it */
+    position: relative;                /* relative to key */
+    width: 60%;                /* key is 30% and with padding it fills it out 90% with some breathing space */
+}
+
+/*--------------------skills---------------------------*/
+ .progress {                                                    /* progress bar */
+     position: relative;
+     height: 25px;
+ }
+
+.progress-type {                /* text on progress bar...want it to sit on top and to the left  */
+    position: absolute;
+    left: 0px;
+    font-weight: 400;
+    padding: 3px 30px 2px 10px;
+    color: #fafafa;
+    background-color: rgba(25,25,25,0.2);   /* for opacity */
+}
+
+.progress-section {
+    margin: 40px 20px;
+}
+
+/* --------------------work history ----*/
+
+.timeline-item {
+    padding: 4em 2em 0em 2em;
+    position: relative;             /* will slide along timeline */
+    color: #fafafa;
+    border-left: 1px solid;     /* gives the effect of vertical timeline */
+}
+
+.timeline-item p{
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item::before {            /* zero in and target the dates attribute */
+    content: attr(dates);  /* search for attribute called dates and display value associated with that dates key */
+    position: absolute;
+    left: 2.5em;
+    top: 3em;
+    display: block;
+    font-family: "Exo", sans-serif;
+    font-weight: 500;
+    font-size: .8em;
+    padding: 0;
+    margin: 0;
+} 
+
+.timeline-item::after {
+    width: 12px;
+    height: 12px;
+    display: block;
+    top: 2.4em;
+    position: absolute;
+    left: -6px;        /* want it to sit out onto timeline */
+    border-radius: 12px;
+    content: '';
+    background: #fafafa;
+}
+
+.history-heading {
+    color: #fafafa;
+    margin-bottom: 50px;
+}
+
+.history-items {
+    margin-bottom: 30px;
+}
+
+
+/* --------media queries------*/
+
+
+@media(min-width: 992px) {                    /* this makes the columns side by side over  breakpoint of 992px */
+    .section-column {                            /* in mobile version the columns collapse below each other */
+    padding: 0 30px 30px;
+    float: none;
+    display: table-cell;
+}
 }
