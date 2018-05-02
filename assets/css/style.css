@@ -23,6 +23,9 @@
     background-color: #9b59b5;
 }
 
+.bg-color-contact {
+    background-color: #ffffff;
+}
 
 
 .ui-menu-color-home {
@@ -338,13 +341,42 @@ footer .cv-pdf i:hover {
 }
 
 
-/* --------media queries------*/
+                        /* ------contact --------*/
+
+
+.contact-heading {
+    font-family: "exo", sans-serif;
+    font-weight: 300;
+    margin-top: 25px;            /* breathing space */
+    margin-bottom: 20px;
+}
+
+.center-form {
+    padding-top: 10px;
+    margin: 0 auto;        /* horizontally centres content */
+    max-width: 70%;
+}
+
+button[type="submit"] {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    background-color: #e84610;
+    color: #fafafa;
+}
+
+                        /* --------media queries------*/
 
 
 @media(min-width: 992px) {                    /* this makes the columns side by side over  breakpoint of 992px */
     .section-column {                            /* in mobile version the columns collapse below each other */
-    padding: 0 30px 30px;
-    float: none;
-    display: table-cell;
+        padding: 0 30px 30px;
+        float: none;
+        display: table-cell;
+}
+    .center-form {            /* set different for bigger devices than for mobile above */
+        padding-top: 30px;
+        min-height: 240px;
+        margin: 0 auto;        /* horizontally centres content */  
+        max-width: 50%;
 }
 }
